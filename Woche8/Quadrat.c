@@ -28,8 +28,9 @@ int quad(char art[], int width) {
         }
     }
     for(int i = 0; i < (width * width) + width - 1; i++) {
-        printf("%c", art[i]);
+        art[i] == '\n' ? printf("%c", art[i]) : printf("%c ", art[i]);
     }
+    
     return strlen(art);
 
 }
@@ -37,7 +38,7 @@ int quad(char art[], int width) {
 
 int main() {
     char arr[1000] = "";
-    int width = 3;
+    int width = 5;
     printf("\n%d", quad(arr, width));
     return 0;
 }
